@@ -9,26 +9,10 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/fact",
-      "dest": "index.js"
-    },
-    {
-      "src": "/fact/(.*)",
-      "dest": "index.js"
-    },
-    {
-      "src": "/add",
-      "dest": "build/index.html"
-    },
-    {
-      "src": "/",
-      "dest": "build/index.html"
-    },
-    {
-      "src": "/(.+)",
-      "dest": "build/$1"
+      "source": "/(.*)",
+      "destination": "index.js"
     }
   ]
 }
