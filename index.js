@@ -7,10 +7,13 @@ const app = express();
 const factRouter = require("./routes/fact");
 // db connection
 try {
-  mongoose.connect(process.env.URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  mongoose.connect(
+    "mongodb+srv://aadityam2003:rpKEVOSC5OIJmNCC@cluster0.1v6kevb.mongodb.net/Facts?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  );
 } catch (e) {
   console.log("could not connect");
 }
