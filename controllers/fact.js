@@ -1,5 +1,5 @@
 const model = require("../models/fact");
-const Fact = model.Fact;
+const { Fact } = model;
 exports.getFacts = async (req, res) => {
   const facts = await Fact.find().sort({ votesInteresting: -1 });
   res.json(facts);
